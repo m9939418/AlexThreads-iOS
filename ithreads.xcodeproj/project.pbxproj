@@ -35,6 +35,8 @@
 		08B462972D06D515005F9584 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462962D06D515005F9584 /* EditProfileView.swift */; };
 		08B4629B2D081FFE005F9584 /* RegisterationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4629A2D081FFE005F9584 /* RegisterationViewModel.swift */; };
 		08B4629D2D082903005F9584 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4629C2D082903005F9584 /* AuthService.swift */; };
+		08B462A12D09768A005F9584 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462A02D09768A005F9584 /* ContentViewModel.swift */; };
+		08B462A32D0ACF50005F9584 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462A22D0ACF50005F9584 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		08B462962D06D515005F9584 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		08B4629A2D081FFE005F9584 /* RegisterationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewModel.swift; sourceTree = "<group>"; };
 		08B4629C2D082903005F9584 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		08B462A02D09768A005F9584 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		08B462A22D0ACF50005F9584 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				08B462992D081FAD005F9584 /* Service */,
-				08B462982D081FA8005F9584 /* ViewModel */,
 				08B462652CFE9570005F9584 /* Views */,
+				08B462982D081FA8005F9584 /* ViewModel */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -224,7 +228,8 @@
 		08B462642CFE954F005F9584 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				08B4622C2CFDC0F7005F9584 /* ContentView.swift */,
+				08B4629E2D097658005F9584 /* View */,
+				08B4629F2D09765E005F9584 /* ViewModel */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				08B4629A2D081FFE005F9584 /* RegisterationViewModel.swift */,
+				08B462A22D0ACF50005F9584 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,6 +390,22 @@
 				08B4629C2D082903005F9584 /* AuthService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		08B4629E2D097658005F9584 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B4622C2CFDC0F7005F9584 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B4629F2D09765E005F9584 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08B462A02D09768A005F9584 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,10 +556,12 @@
 				08B462892D00350B005F9584 /* ThreadCell.swift in Sources */,
 				08B4627F2CFF6DE8005F9584 /* ActivityView.swift in Sources */,
 				08B4628C2D01B7E6005F9584 /* CircularProfileImageView.swift in Sources */,
+				08B462A32D0ACF50005F9584 /* LoginViewModel.swift in Sources */,
 				08B4628E2D01B87C005F9584 /* UserCell.swift in Sources */,
 				08B4627B2CFF6DB8005F9584 /* CreateThreadView.swift in Sources */,
 				08B462912D029EFE005F9584 /* ProfileThreadFilter.swift in Sources */,
 				08B4626C2CFEFD98005F9584 /* ThreadsTextFieldModifier.swift in Sources */,
+				08B462A12D09768A005F9584 /* ContentViewModel.swift in Sources */,
 				08B4622D2CFDC0F7005F9584 /* ContentView.swift in Sources */,
 				08B4626F2CFF1232005F9584 /* ThreadsTabBarView.swift in Sources */,
 				08B462772CFF6D6F005F9584 /* ExploreView.swift in Sources */,

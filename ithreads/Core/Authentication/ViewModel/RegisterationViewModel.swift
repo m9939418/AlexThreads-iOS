@@ -23,9 +23,5 @@ class RegisterationViewModel: ObservableObject {
             fullname: fullname,
             username: username
         )
-        
     }
-    
-    
-    
 }
