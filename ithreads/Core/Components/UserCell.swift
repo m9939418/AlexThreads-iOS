@@ -42,6 +42,6 @@ struct UserCell: View {
 //}
 struct UserCell_Previews: PreviewProvider {
     static var previews: some View {
-        UserCell(user: dev.user) // 使用 dev 屬性
+        UserCell(user: dev.user)
     }
 }
