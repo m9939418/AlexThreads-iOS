@@ -45,6 +45,7 @@
 		08B462B92D102C9F005F9584 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462B82D102C9F005F9584 /* CurrentUserProfileViewModel.swift */; };
 		08B462BC2D102E44005F9584 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462BB2D102E44005F9584 /* ProfileHeaderView.swift */; };
 		08B462BE2D10312C005F9584 /* UserContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462BD2D10312C005F9584 /* UserContentListView.swift */; };
+		08B462C22D126960005F9584 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B462C12D126960005F9584 /* EditProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		08B462B82D102C9F005F9584 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 		08B462BB2D102E44005F9584 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		08B462BD2D10312C005F9584 /* UserContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListView.swift; sourceTree = "<group>"; };
+		08B462C12D126960005F9584 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				08B462932D06D495005F9584 /* View */,
+				08B462C02D12694B005F9584 /* ViewModel */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -486,6 +489,14 @@
 				08B462822CFF6E0E005F9584 /* ProfileView.swift */,
 			);
 			path = UserProfie;
+			sourceTree = "<group>";
+		};
+		08B462C02D12694B005F9584 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08B462C12D126960005F9584 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,6 +644,7 @@
 				08B462972D06D515005F9584 /* EditProfileView.swift in Sources */,
 				08B4629D2D082903005F9584 /* AuthService.swift in Sources */,
 				08B462B02D101666005F9584 /* PreviewProvider.swift in Sources */,
+				08B462C22D126960005F9584 /* EditProfileViewModel.swift in Sources */,
 				08B462692CFEF8D6005F9584 /* RegisterationView.swift in Sources */,
 				08B462892D00350B005F9584 /* ThreadCell.swift in Sources */,
 				08B462A92D0BDA55005F9584 /* UserService.swift in Sources */,
