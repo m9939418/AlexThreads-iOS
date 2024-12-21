@@ -10,11 +10,13 @@ import SwiftUI
 import _PhotosUI_SwiftUI
 
 struct EditProfileView: View {
+    let user: User
+    
     @State private var bio = ""
     @State private var link = ""
     @State private var isPrivateProfile = false
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var viewModel: CurrentUserProfileViewModel
+    @StateObject var viewModel = EditProfileViewModel()
     
     var body: some View {
         NavigationStack {
@@ -26,7 +28,8 @@ struct EditProfileView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Name")
-                            Text("Alex Yang")
+                                .fontWeight(.semibold)
+                            Text(user.fullname)
                         }
                         
                         Spacer()
@@ -39,7 +42,7 @@ struct EditProfileView: View {
                                     .frame(width: 40, height: 40)
                                     .clipShape(Circle())
                             } else {
-                                CircularProfileImageView()
+                                CircularProfileImageView(user: user, size: .small)
                             }
                         }
                     }
@@ -88,7 +91,10 @@ struct EditProfileView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Done") {
-                        
+                        Task {
+                            try await viewModel.updateUserData()
+                            dismiss()
+                        }
                     }
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -99,6 +105,8 @@ struct EditProfileView: View {
     }
 }
 
-#Preview {
-    EditProfileView()
+struct EditProfileView_Preview: PreviewProvider {
+    static var previews: some View {
+        EditProfileView(user: dev.user)
+    }
 }

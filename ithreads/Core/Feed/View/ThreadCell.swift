@@ -11,12 +11,8 @@ import SwiftUI
 struct ThreadCell: View {
     var body: some View {
         VStack {
-            HStack(alignment: .top, spacing: 12) {
-                Image("profile_demo")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
+            HStack(alignment: .top, spacing: 12) {                
+                CircularProfileImageView(user: nil, size: .small)
                            
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {

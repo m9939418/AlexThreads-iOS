@@ -41,4 +41,14 @@ class UserService {
     func resetUser() {
         self.currentUser = nil
     }
+    
+    /** 更新資料庫- [users] Table 的 profileImageUrl 欄位 */
+    @MainActor
+    func uploadUserProfileImage(withImageUrl imageUrl: String) async throws {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        try await Firestore.firestore().collection("users").document(currentUid).updateData([
+            "profileImageUrl": imageUrl
+        ])
+        self.currentUser?.profileImageUrl = imageUrl
+    }
 }
