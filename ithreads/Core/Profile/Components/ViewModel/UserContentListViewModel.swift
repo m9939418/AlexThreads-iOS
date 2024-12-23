@@ -20,6 +20,12 @@ class UserContentListViewModel: ObservableObject {
     
     @MainActor
     func fetchUserThreads() async throws {
-        self.threads = try await ThreadService.fetchUserThread(uid: user.id)
+         var threads = try await ThreadService.fetchUserThread(uid: user.id)
+        
+        for i in 0 ..< threads.count {
+            threads[i].user = self.user
+        }
+        
+        self.threads = threads
     }
 }
